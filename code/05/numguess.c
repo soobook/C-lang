@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h> 
-#include <stdlib.h> //rand(), srand()¸¦ À§ÇÑ Çì´õÆÄÀÏ Æ÷ÇÔ 
-#include <time.h>   //time()À» À§ÇÑ Çì´õÆÄÀÏ Æ÷ÇÔ 
+#include <stdlib.h> //rand(), srand()ë¥¼ ìœ„í•œ í—¤ë”íŒŒì¼ í¬í•¨ 
+#include <time.h>   //time()ì„ ìœ„í•œ í—¤ë”íŒŒì¼ í¬í•¨ 
 
 #define MAX 100
 
@@ -12,20 +12,21 @@ int main(void)
 	srand((long)time(NULL));
 	guess = rand() % MAX + 1;
 
-	printf("1¿¡¼­ %d »çÀÌ¿¡¼­ ÇÑ Á¤¼ö°¡ °áÁ¤µÇ¾ú½À´Ï´Ù.\n", MAX);
-	printf("ÀÌ Á¤¼ö´Â ¹«¾ùÀÏ±î¿ä? ÀÔ·ÂÇØ º¸¼¼¿ä. : ");
+	printf("1ì—ì„œ %d ì‚¬ì´ì—ì„œ í•œ ì •ìˆ˜ê°€ ê²°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.\n", MAX);
+	printf("ì´ ì •ìˆ˜ëŠ” ë¬´ì—‡ì¼ê¹Œìš”? ì…ë ¥í•´ ë³´ì„¸ìš”. : ");
 
 	while (scanf("%d", &input)) {
 		if (input > guess)
-			printf("ÀÔ·ÂÇÑ ¼ö %dº¸´Ù ÀÛ½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä. : ", input);
+			printf("ì…ë ¥í•œ ìˆ˜ %dë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”. : ", input);
 		else if (input < guess)
-			printf("ÀÔ·ÂÇÑ ¼ö %dº¸´Ù Å­´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä. : ", input);
+			printf("ì…ë ¥í•œ ìˆ˜ %dë³´ë‹¤ í½ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”. : ", input);
 		else
 		{
-			puts("Á¤´äÀÔ´Ï´Ù.");
+			puts("ì •ë‹µì…ë‹ˆë‹¤.");
 			break;
 		}
 	}
 
 	return 0;
 }
+
