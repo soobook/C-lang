@@ -10,8 +10,8 @@ int main(void)
 
 	printf("Hello, World!\n");
 
-	printf("ºÎµ¿¼Ò¼ö °ª: %f, %f\n", x, y);
-	printf("Á¤¼ö °ª: %d, %d\n", age, value);
+	printf("ÂºÃÂµÂ¿Â¼Ã’Â¼Ã¶ Â°Âª: %f, %f\n", x, y);
+	printf("ÃÂ¤Â¼Ã¶ Â°Âª: %d, %d\n", age, value);
 
 	return 0;
 }
