@@ -10,8 +10,8 @@ int main(void)
 
 	printf("Hello, World!\n");
 
-	printf("ºÎµ¿¼Ò¼ö °ª: %f, %f\n", x, y);
-	printf("Á¤¼ö °ª: %d, %d\n", age, value);
+	printf("부동소수 값: %f, %f\n", x, y);
+	printf("정수 값: %d, %d\n", age, value);
 
 	return 0;
 }
