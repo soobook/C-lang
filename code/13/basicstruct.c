@@ -1,28 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
-//³¯Â¥¸¦ À§ÇÑ ±¸Á¶Ã¼ 
-struct date
-{
-	int year;	//³â
-	int month;	//¿ù
-	int day;	//ÀÏ
-};
-
-//ÀºÇà°èÁÂ¸¦ À§ÇÑ ±¸Á¶Ã¼ 
+//ì€í–‰ ê³„ì¢Œë¥¼ ìœ„í•œ êµ¬ì¡°ì²´ ì •ì˜
 struct account
 {
-	struct date open;	//°èÁÂ °³¼³ÀÏÀÚ
-	char name[12];		//°èÁÂÁÖ ÀÌ¸§
-	int actnum;			//°èÁÂ¹øÈ£
-	double balance;		//ÀÜ°í
+	char name[12];  //ê³„ì¢Œì£¼ ì´ë¦„
+	int actnum;		//ê³„ì¢Œë²ˆí˜¸
+	double balance; //ì”ê³ 
 };
 
 int main(void)
 {
-	struct account me = { { 2022, 3, 9 }, "È«±æµ¿", 1001, 300000 };
+	//êµ¬ì¡°ì²´ ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
+	struct account mine = { "í™ê¸¸ë™", 1001, 300000 };
+	struct account yours;
 
-	printf("±¸Á¶Ã¼ Å©±â: %zu\n", sizeof(me));
-	printf("[%d. %d. %d]\n", me.open.year, me.open.month, me.open.day);
-	printf("%s %d %.2f\n", me.name, me.actnum, me.balance);
+	strcpy(yours.name, "ì´ë™ì›");
+	//strcpy_s(yours.name, 12, "ì´ë™ì›"); //ê°€ëŠ¥
+	//yours.name = "ì´ë™ì›"; //ì˜¤ë¥˜
+	yours.actnum = 1002;
+	yours.balance = 500000;
+
+	printf("êµ¬ì¡°ì²´ í¬ê¸°: %zu\n", sizeof(mine));
+	printf("%s %d %.2f\n", mine.name, mine.actnum, mine.balance);
+	printf("%s %d %.2f\n", yours.name, yours.actnum, yours.balance);
+
+	return 0;
 }
