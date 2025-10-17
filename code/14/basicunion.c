@@ -10,14 +10,16 @@ int main() {
     Value v;
 
     v.i = 100;
-    printf("Á¤¼öÇü °ª: %d\n", v.i);
+    printf("ì •ìˆ˜í˜• ê°’: %d\n", v.i);
 
     v.f = 2.71;
-    printf("½Ç¼öÇü °ª: %.2f\n", v.f);
+    printf("ì‹¤ìˆ˜í˜• ê°’: %.2f\n", v.f);
 
     typedef Value myval;
     myval a = {50};
-    printf("Á¤¼öÇü °ª: %d\n", a.i);
+    //myval a = { 3.6 }; // ê²½ê³  ë°œìƒ
+    printf("ì •ìˆ˜í˜• ê°’: %d\n", a.i);
 
     return 0;
 }
+
