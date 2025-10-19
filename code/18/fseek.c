@@ -1,24 +1,26 @@
 #include <stdio.h>
+#include <errno.h>
 
 int main() {
     FILE* fp = fopen("sample.txt", "r");
     if (fp == NULL) {
-        perror("ÆÄÀÏ ¿­±â ½ÇÆÐ");
+        perror("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨");
         return 1;
     }
 
-    // ÆÄÀÏ Æ÷ÀÎÅÍ¸¦ 5¹ÙÀÌÆ® ¾ÕÀÇ À§Ä¡·Î ÀÌµ¿ (ÆÄÀÏ Ã³À½ ±âÁØ)
+    // íŒŒì¼ í¬ì¸í„°ë¥¼ 5ë°”ì´íŠ¸ ì•žì˜ ìœ„ì¹˜ë¡œ ì´ë™ (íŒŒì¼ ì²˜ìŒ ê¸°ì¤€)
     fseek(fp, 5, SEEK_SET);
 
-    // ±× À§Ä¡¿¡¼­ ¹®ÀÚ 1°³ ÀÐ±â
+    // ê·¸ ìœ„ì¹˜ì—ì„œ ë¬¸ìž 1ê°œ ì½ê¸°
     int ch = fgetc(fp);
     if (ch != EOF) {
-        printf("5¹øÂ° ¹ÙÀÌÆ® À§Ä¡ÀÇ ¹®ÀÚ: %c\n", ch);
+        printf("5ë²ˆì§¸ ë°”ì´íŠ¸ ìœ„ì¹˜ì˜ ë¬¸ìž: %c\n", ch);
     }
     else {
-        printf("¹®ÀÚ ÀÐ±â ½ÇÆÐ ¶Ç´Â ÆÄÀÏ ³¡\n");
+        printf("ë¬¸ìž ì½ê¸° ì‹¤íŒ¨ ë˜ëŠ” íŒŒì¼ ë\n");
     }
 
     fclose(fp);
     return 0;
 }
+
