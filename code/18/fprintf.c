@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <errno.h>
 
 int main() {
     FILE* fp = fopen("score.txt", "w");
     if (fp == NULL) {
-        perror("颇老 凯扁 角菩");
+        perror("韺岇澕 鞐搓赴 鞁ろ尐");
         return 1;
     }
 
@@ -12,8 +13,9 @@ int main() {
     float score = 95.5;
 
     fprintf(fp, "ID: %d\nName: %s\nScore: %.1f\n", id, name, score);
-    printf("颇老 score.txt 静扁 己傍\n");
+    printf("韺岇澕 score.txt 鞊瓣赴 靹标车\n");
 
     fclose(fp);
     return 0;
 }
+
