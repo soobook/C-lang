@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <errno.h>
 
 int main() {
     FILE* fp = fopen("message.txt", "w");
     if (fp == NULL) {
-        perror("ÆÄÀÏ ¿­±â ½ÇÆĞ");
+        perror("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨");
         return 1;
     }
 
     fputs("Hello, world!\n", fp);
     fputs("This is a test message.\n", fp);
-    printf("ÆÄÀÏ message.txt ¾²±â ¼º°ø\n");
+    printf("íŒŒì¼ message.txt ì“°ê¸° ì„±ê³µ\n");
 
     fclose(fp);
     return 0;
 }
+
