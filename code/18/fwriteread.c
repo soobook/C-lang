@@ -1,8 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 
-// ÇĞ»ı Á¤º¸ ±¸Á¶Ã¼ Á¤ÀÇ
+// í•™ìƒ ì •ë³´ êµ¬ì¡°ì²´ ì •ì˜
 typedef struct {
     int id;
     char name[20];
@@ -10,34 +11,35 @@ typedef struct {
 } Student;
 
 int main() {
-    // ÀúÀåÇÒ ÇĞ»ı µ¥ÀÌÅÍ
+    // ì €ì¥í•  í•™ìƒ ë°ì´í„°
     Student s1 = { 1001, "Alice", 91.5 };
 
-    // 1. ±¸Á¶Ã¼ µ¥ÀÌÅÍ¸¦ ÆÄÀÏ¿¡ ÀúÀå
-    FILE* fp = fopen("student.bin", "wb");  // ¹ÙÀÌ³Ê¸® ¾²±â ¸ğµå
+    // 1. êµ¬ì¡°ì²´ ë°ì´í„°ë¥¼ íŒŒì¼ì— ì €ì¥
+    FILE* fp = fopen("student.bin", "wb");  // ë°”ì´ë„ˆë¦¬ ì“°ê¸° ëª¨ë“œ
     if (fp == NULL) {
-        perror("ÆÄÀÏ ¿­±â ½ÇÆĞ");
+        perror("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨");
         return 1;
     }
 
-    fwrite(&s1, sizeof(Student), 1, fp);  // ±¸Á¶Ã¼ 1°³ ÀúÀå
+    fwrite(&s1, sizeof(Student), 1, fp);  // êµ¬ì¡°ì²´ 1ê°œ ì €ì¥
     fclose(fp);
 
-    // 2. ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ ´Ù½Ã ÀĞ±â
+    // 2. ì €ì¥ëœ ë°ì´í„°ë¥¼ ë‹¤ì‹œ ì½ê¸°
     Student s2;
-    fp = fopen("student.bin", "rb");  // ¹ÙÀÌ³Ê¸® ÀĞ±â ¸ğµå
+    fp = fopen("student.bin", "rb");  // ë°”ì´ë„ˆë¦¬ ì½ê¸° ëª¨ë“œ
     if (fp == NULL) {
-        perror("ÆÄÀÏ ¿­±â ½ÇÆĞ");
+        perror("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨");
         return 1;
     }
 
-    fread(&s2, sizeof(Student), 1, fp);  // ±¸Á¶Ã¼ 1°³ ÀĞ±â
+    fread(&s2, sizeof(Student), 1, fp);  // êµ¬ì¡°ì²´ 1ê°œ ì½ê¸°
     fclose(fp);
 
-    // ÀĞ¾î¿Â µ¥ÀÌÅÍ Ãâ·Â
+    // ì½ì–´ì˜¨ ë°ì´í„° ì¶œë ¥
     printf("ID: %d\n", s2.id);
     printf("Name: %s\n", s2.name);
     printf("Score: %.1f\n", s2.score);
 
     return 0;
 }
+
