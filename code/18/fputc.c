@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include <errno.h>
 
 int main() {
     FILE* fp = fopen("alphabet.txt", "w");
     if (fp == NULL) {
-        perror("颇老 凯扁 角菩");
+        perror("韺岇澕 鞐搓赴 鞁ろ尐");
         return 1;
     }
 
     for (char c = 'A'; c <= 'Z'; c++) {
         fputc(c, fp);
     }
-    printf("颇老 alphabet.txt 静扁 己傍\n");
+    printf("韺岇澕 alphabet.txt 鞊瓣赴 靹标车\n");
 
     fclose(fp);
     return 0;
 }
+
