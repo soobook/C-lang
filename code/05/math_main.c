@@ -5,8 +5,8 @@
 int main() {
     int x = 5, y = 3;
 
-    printf("µ¡¼À: %d\n", add(x, y));
-    printf("°ö¼À: %d\n", multiply(x, y));
+    printf("ë§ì…ˆ: %d\n", add(x, y));
+    printf("ê³±ì…ˆ: %d\n", multiply(x, y));
 
     return 0;
 }
