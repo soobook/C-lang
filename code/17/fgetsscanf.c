@@ -4,7 +4,7 @@
 int main() {
     FILE* fp = fopen("student.txt", "r");
     if (fp == NULL) {
-        printf("ÆÄÀÏ ¿­±â ½ÇÆĞ!\n");
+        printf("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨!\n");
         return 1;
     }
 
@@ -14,7 +14,7 @@ int main() {
 
     while (fgets(line, sizeof(line), fp) != NULL) {
         sscanf(line, "%s %d", name, &age);
-        printf("ÀÌ¸§: %s, ³ªÀÌ: %d\n", name, age);
+        printf("ì´ë¦„: %s, ë‚˜ì´: %d\n", name, age);
     }
 
     fclose(fp);
