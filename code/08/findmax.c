@@ -9,7 +9,7 @@ int main() {
             max = data[i];
     }
 
-    printf("Maximum value = %d\n", max);  // Ãâ·Â: 30
+    printf("Maximum value = %d\n", max);  // ì¶œë ¥: 30
 
     return 0;
 }
