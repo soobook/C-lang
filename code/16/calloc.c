@@ -6,7 +6,7 @@ int main() {
     if (arr == NULL) return 1;
 
     for (int i = 0; i < 5; i++) {
-        printf("%d ", arr[i]); // ¸ðµÎ 0 Ãâ·Â
+        printf("%d ", arr[i]); // ëª¨ë‘ 0 ì¶œë ¥
     }
     printf("\n");
 
