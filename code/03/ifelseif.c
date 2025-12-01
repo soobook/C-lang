@@ -6,13 +6,13 @@ int main(void)
 	gpa = 4.4;
 
 	if (gpa >= 4.3)
-		printf("ÃÖ¿ìµî\n");
+		printf("ìµœìš°ë“±\n");
 	else if (gpa >= 3.8)
-		printf("¿ìµî\n");
+		printf("ìš°ë“±\n");
 	else if (gpa >= 3.0)
-		printf("¿ì¼ö\n");
+		printf("ìš°ìˆ˜\n");
 	else
-		printf("3.0 ¹Ì¸¸\n");
+		printf("3.0 ë¯¸ë§Œ\n");
 
 	return 0;
 }
