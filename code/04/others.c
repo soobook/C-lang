@@ -1,4 +1,4 @@
-//ÇÔ¼ö add, findMax, findMin, printMin ±¸Çö
+//í•¨ìˆ˜ add, findMax, findMin, printMin êµ¬í˜„
 int add(int a, int b)
 {
 	int sum = a + b;
