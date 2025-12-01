@@ -4,9 +4,9 @@ int main(void)
 {
 	int i;
 	for (i = 1; i <= 5; i++)
-		printf("¹İº¹ %d\n", i);
+		printf("ë°˜ë³µ %d\n", i);
 
-	printf("\nfor Á¾·á ÀÌÈÄ i => %d\n", i);
+	printf("\nfor ì¢…ë£Œ ì´í›„ i => %d\n", i);
 
 	return 0;
 }
