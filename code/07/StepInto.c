@@ -6,7 +6,7 @@ int multiply(int a, int b) {
 
 int main() {
     int result = multiply(4, 5);
-    printf("°á°ú: %d\n", result);
+    printf("ê²°ê³¼: %d\n", result);
 
     return 0;
 }
